@@ -1,0 +1,55 @@
+import java.util.Scanner;
+class product
+{
+  String pcode;
+  String pname;
+  double price;
+
+  void getinput()
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter product code ");
+    pcode=sc.nextLine();
+    System.out.println("Enter product name ");
+    pname=sc.nextLine();
+    System.out.println("Enter product price ");
+    price=sc.nextDouble();
+  }
+
+  void display()
+  {
+    System.out.println("Product with lowest price: ");
+    System.out.println("Product code: "+pcode);
+    System.out.println("Product name: "+pname);
+    System.out.println("Product price: "+price);
+  }
+}
+
+class CO1_1
+{
+  public static void main(String args[])
+  {
+    product p1= new product();
+    p1.getinput();
+
+    product p2= new product();
+    p2.getinput();
+
+    product p3= new product();
+    p3.getinput();
+
+
+    if(p1.price<p2.price && p1.price<p3.price)
+    {
+        p1.display();
+    }
+    else if(p2.price<p3.price)
+    {
+        p2.display();
+    }
+    else
+    {
+        p3.display();
+    }
+  }
+}
