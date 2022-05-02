@@ -1,0 +1,55 @@
+import java.util.Scanner;
+class Shape
+{
+    int rarea,sarea,l,b,a;
+    
+	  void shape(int x,int y)
+    {
+   	   l=x;
+   	   b=y;
+   	   rarea=l*b;
+   	   System.out.println("Area of rectangle is "+rarea);
+    }
+ 
+	  void shape(int z)
+    {
+   	 a=z;
+   	 sarea=a*a;
+   	 System.out.println("Area of square is "+sarea);
+    }
+    
+	  void shape(double w)
+    {
+      double r=w;
+      double carea=3.14*r*r;
+      System.out.println("Area of circle is "+carea);   
+    }
+}
+
+class CO3_1_1
+{
+  public static void main(String args[])
+  {
+   	 Scanner input=new Scanner(System.in);
+   	 
+	  System.out.println("enter the length and breadth of the rectangle");
+   	int len=input.nextInt();
+   	int bre=input.nextInt();
+   	 
+	  System.out.println("enter the side of the square");
+   	int side=input.nextInt();
+	 
+	  System.out.println("enter the radius of the circle");
+   	double rad=input.nextDouble();
+   	 
+	  System.out.println("");
+	 
+	  Shape s1=new Shape();
+   	Shape s2=new Shape();
+   	Shape s3= new Shape();
+	 
+	  s1.shape(len,bre);
+	  s2.shape(side);
+	  s3.shape(rad);
+ }
+}
