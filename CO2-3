@@ -1,0 +1,51 @@
+import java.util.*;  
+class CO2_3 {
+    int eNO;
+    String eName;
+    int eSalary;
+
+    public void read(){
+        Scanner sc= new Scanner(System.in);
+		
+        System.out.print("Enter ID : "); 
+        eNO = Integer.parseInt(sc.nextLine());
+		
+        System.out.print("Enter Name : "); 
+        eName = sc.nextLine();
+		
+        System.out.print("Enter monthly salary : "); 
+        eSalary = Integer.parseInt(sc.nextLine());
+    }
+
+    public void display(){
+        System.out.println("Name : "+ eName );
+    }
+    public static void main(String []args){
+		
+		Scanner s= new Scanner(System.in);
+		
+    System.out.println("Enter number of objects you want to create");
+		int n = Integer.parseInt(s.nextLine());
+		
+        int i;
+        int No;
+        CO2_3 emp[] = new CO2_3[n];
+        for(i=0;i<n;i++){
+            emp[i] = new CO2_3();
+            emp[i].read();
+        }
+        System.out.println("Search"); 
+        
+            Scanner sc= new Scanner(System.in);
+            System.out.print("Enter ID : "); 
+            No = Integer.parseInt(sc.nextLine());
+            for(i=0;i<n;i++){
+                if(emp[i].eNO == No){
+                    emp[i].display();
+                    break;
+                }
+            }
+        
+
+    }
+}
